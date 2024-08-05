@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <header className="bg-light p-3 mb-4">
         <div className="container">
-          <img src="/logo.png" alt="SoftWave Innovate Logo" />
+          <Image src="/logo.png" alt="SoftWave Innovate Logo" />
           <h1 className="display-4 mt-3">SoftWave Innovate</h1>
           <p className="lead">Transforma datos en decisiones: Intuitivo, Innovador, Inteligente</p>
         </div>
