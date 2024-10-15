@@ -53,7 +53,7 @@ const Principal: React.FC = () => {
           <div className="analyzeContainer">
             <input
               type="text"
-              className="textInput"
+              className="textInput text-black"
               placeholder="Ingresa el enlace de la publicación de Facebook..."
               value={postUrl}
               onChange={(e) => setPostUrl(e.target.value)} // Almacena la URL que ingresa el usuario

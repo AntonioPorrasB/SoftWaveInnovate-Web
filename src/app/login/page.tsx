@@ -42,7 +42,7 @@ export default function Login() {
       const data = await response.json();
       console.log('Login exitoso:', data.message);
       alert('Login exitoso');
-      router.push('/');
+      router.push('/datawave');
     } catch (error) {
       console.error('Error iniciando sesión:', error);
       alert('Error iniciando sesión');
