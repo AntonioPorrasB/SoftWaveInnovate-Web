@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: white;
+  padding: 20px;
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  margin-left: 40px;
+}
+
+.imageTextContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageTextMain {
+  font-size: 34px;
+  margin: 0;
+  color: #BF1D32;
+}
+
+.imageTextSub {
+  font-size: 24px;
+  margin: 0;
+  color:#BF1D32;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.leftContent {
+  flex: 1;
+  display: flex;              /*Esto es lo de las letras en blanco*/
+  flex-direction: column;
+  justify-content: flex-start;
+  color: white;
+  font-size: 25px;
+}
+
+.rightContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.rightImage {   /*Tamano de la imagen CEL.png*/
+  width: 400px; 
+  height: 500px; 
+  margin-left: 300px; 
+}
+
+.analyzeContainer {
+  margin-top: 80px;  /*ESTO ES PARA EL DIV que contiene la entrada de texto o url*/
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.textInput {
+  border: 1px solid gray;
+  border-radius: 0px;
+  padding: 13px;                /*AQUI se modifica el tamano forma y color del text input*/
+  margin-bottom: 0px;
+  width: 80%;
+  max-width: 300px;
+  background-color: white;
+}
+
+.button {
+  background-color: #F6841C;   /*Todo el diseno del boton de analisar*/
+  color: white;
+  border: none;
+  border-radius: 0px; /* Ajusta el border-radius para hacer el boton mas rectangular */
+  padding: 10px 50px; /* Ajusta el padding para dar mas espacio al boton */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #F6841C;
+}
+
+.content .rightContent,
+.content .leftContent {            /*ESTO ES el color de ambos div de abajo que seria un rojo*/
+  background-color: #BF1D32;
+}
+
+
+

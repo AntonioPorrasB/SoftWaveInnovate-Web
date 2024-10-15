@@ -1,17 +1,17 @@
 import Image from "next/image";
+import Link from "next/link"; // Importa Link para la navegación
 
 export default function Home() {
   return (
     <div>
       <header className="bg-light p-3 mb-4">
         <div className="container">
-        <h1 className="display-4 mt-3">Prueba para ver si esta funcionando Vercel</h1>
-          <Image src="/logo.png" alt="SoftWave Innovate Logo" />
+          <h1 className="display-4 mt-3">Prueba para ver si esta funcionando Vercel</h1>
           <h1 className="display-4 mt-3">SoftWave Innovate</h1>
           <p className="lead">Transforma datos en decisiones: Intuitivo, Innovador, Inteligente</p>
         </div>
       </header>
-      
+
       <main className="container">
         <section className="mb-5">
           <h2 className="mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>Sobre Nosotros</h2>
@@ -21,7 +21,7 @@ export default function Home() {
             y fácil de usar, permitiendo a las organizaciones obtener el máximo beneficio sin complicaciones.
           </p>
         </section>
-        
+
         <section className="mb-5">
           <h2 className="mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>Nuestra Herramienta: Sentimetrics</h2>
           <p style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -30,7 +30,7 @@ export default function Home() {
             sus estrategias de contenido y fortalecer la conexión con su audiencia.
           </p>
         </section>
-        
+
         <section>
           <h2 className="mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>Productos Actuales</h2>
           <ul className="list-group">
@@ -44,8 +44,18 @@ export default function Home() {
             {/* Agrega más productos aquí */}
           </ul>
         </section>
+
+        {/* Sección de botones para registro e inicio de sesión */}
+        <section className="text-center mb-5">
+          <Link href="/register" className="btn btn-primary mx-2">
+            Registrar
+          </Link>
+          <Link href="/login" className="btn btn-secondary mx-2">
+            Iniciar Sesión
+          </Link>
+        </section>
       </main>
-      
+
       <footer className="bg-light p-3 mt-4">
         <div className="container text-center">
           <p style={{ fontFamily: 'Raleway, sans-serif' }}>&copy; 2024 SoftWave Innovate. Todos los derechos reservados.</p>
