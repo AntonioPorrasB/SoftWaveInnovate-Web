@@ -6,23 +6,25 @@
 @font-face {
   
 
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-Regular.ttf') format('truetype'),
-       url('/fonts/Raleway-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Gotham-Bold';
+  src: url('/fonts/GOTHAMROUNDED-BOLD.otf') format('opentype');
+  font-weight: bold;
   font-style: normal;
 
-  font-family: 'Montserrat';
-  src: url('/fonts/Montserrat-Regular.ttf') format('truetype'),
-       url('/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-family: 'Gotham';
+  src: url('/fonts/GOTHAMROUNDEDLIGHT.ttf') format('truetype'),
+       url('/fonts/GOTHAMROUNDEDLIGHT.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-:root {
+:root{
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --header-height: 80px;
+  --footer-height: 190px;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,16 +35,34 @@
   }
 }
 
-body {
-  background-color: rgb(255, 255, 255);
+html body {
+  background-color: rgba(255, 255, 255, 0);
   color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Gotham';
+  min-height: 100vh;
+  height: 100%;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-height);
+}
+
+footer {
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  color: white;
 }

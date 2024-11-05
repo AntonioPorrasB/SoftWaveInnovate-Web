@@ -1,59 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
-import { useRouter } from 'next/navigation';
-
-const Register = () => {
-  const [formData, setFormData] = useState({
-    nombre: '',
-    correo: '',
-    usuario: '',
-    contraseña: '',
-  });
-
-  const router = useRouter();
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      //const response = await fetch('http://127.0.0.1:8000/register', {
-      const response = await fetch('https://softwaveapi.onrender.com/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.nombre,
-          email: formData.correo,
-          username: formData.usuario,
-          password: formData.contraseña,
-        }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        console.error('Error:', errorData.detail || 'Error desconocido');
-        alert(errorData.detail || 'Error registrando usuario');
-        return;
-      }
-
-      const data = await response.json();
-      console.log('Éxito:', data);
-      alert('¡Cuenta creada exitosamente!');
-      router.push('/login');
-    } catch (error) {
-      console.error('Error registrando usuario:', error);
-      alert('Error registrando usuario');
-    }
-  };
-
+//const response = await fetch('https://softwaveapi.onrender.com/register', {
+// e: React.ChangeEvent<HTMLInputElement>
+// e: React.FormEvent<HTMLFormElement>
+const Pruebas = () => {
   return (
     <div
       style={{
@@ -86,15 +37,12 @@ const Register = () => {
               border: '1px solid rgba(255, 255, 255, 0.2)',
             }}
           >
-            <Form onSubmit={handleSubmit}>
+            <Form>
               <Form.Group controlId="formName">
                 <Form.Label style={{ color: '#CCCCCC' }}>Nombre</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Ingresa tu nombre"
-                  name="nombre"
-                  value={formData.nombre}
-                  onChange={handleChange}
                   className="mb-3"
                   style={{
                     backgroundColor: 'transparent',
@@ -106,15 +54,11 @@ const Register = () => {
                   }}
                 />
               </Form.Group>
-
               <Form.Group controlId="formEmail">
                 <Form.Label style={{ color: '#CCCCCC' }}>Correo Electrónico</Form.Label>
                 <Form.Control
                   type="email"
                   placeholder="Ingresa tu correo electrónico"
-                  name="correo"
-                  value={formData.correo}
-                  onChange={handleChange}
                   className="mb-3"
                   style={{
                     backgroundColor: 'transparent',
@@ -126,15 +70,11 @@ const Register = () => {
                   }}
                 />
               </Form.Group>
-
               <Form.Group controlId="formUsername">
                 <Form.Label style={{ color: '#CCCCCC' }}>Usuario</Form.Label>
                 <Form.Control
                   type="text"
                   placeholder="Ingresa tu usuario"
-                  name="usuario"
-                  value={formData.usuario}
-                  onChange={handleChange}
                   className="mb-3"
                   style={{
                     backgroundColor: 'transparent',
@@ -146,15 +86,11 @@ const Register = () => {
                   }}
                 />
               </Form.Group>
-
               <Form.Group controlId="formPassword">
                 <Form.Label style={{ color: '#CCCCCC' }}>Contraseña</Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Contraseña"
-                  name="contraseña"
-                  value={formData.contraseña}
-                  onChange={handleChange}
                   className="mb-3"
                   style={{
                     backgroundColor: 'transparent',
@@ -166,9 +102,7 @@ const Register = () => {
                   }}
                 />
               </Form.Group>
-
               <Button
-                type="submit"
                 variant="light"
                 className="w-100"
                 style={{
@@ -189,4 +123,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Pruebas;

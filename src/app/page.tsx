@@ -3,14 +3,7 @@ import Link from "next/link"; // Importa Link para la navegación
 
 export default function Home() {
   return (
-    <div>
-      <header className="bg-light p-3 mb-4">
-        <div className="container">
-          <h1 className="display-4 mt-3">Prueba para ver si esta funcionando Vercel</h1>
-          <h1 className="display-4 mt-3">SoftWave Innovate</h1>
-          <p className="lead">Transforma datos en decisiones: Intuitivo, Innovador, Inteligente</p>
-        </div>
-      </header>
+    <div className="section" style={{paddingTop:'80px',backgroundColor: '#ffffff'}}>
 
       <main className="container">
         <section className="mb-5">
